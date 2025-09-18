@@ -1,2 +1,2 @@
 # Calculadora
-el que lo lea es gay
+ta bonita
