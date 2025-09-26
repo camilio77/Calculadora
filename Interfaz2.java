@@ -1,46 +1,39 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Interfaz2 extends JFrame {
-    private JLabel Jl;
-    private JButton Boton1;
-    private JButton Boton2;
-    private JButton Boton4;
-    private JButton Boton5;
-    private JButton Boton7;
-    private JButton Boton8;
-    private JButton Boton3;
-    private JButton Boton6;
-    private JButton Boton9;
-    private JButton Boton0;
-    private JButton BotonClear;
-    private JButton BotonIgual;
-    private JButton BotonSuma;
-    private JButton BotonResta;
-    private JButton BotonMultiplicacion;
-    private JButton BotonDividir;
-    private JButton BotonBorrar;
-    private JButton BotonElevar;
-    private JButton BotonRaiz;
-    private JButton BotonModulo;
-    private JPanel Interfaz;
+    private JTextField Texto;
 
     public Interfaz2() {
-        setContentPane(Interfaz);
         setTitle("Calculadora");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(250, 300);
+        setSize(700, 700);
         setLocationRelativeTo(null);
+
+        Texto = new JTextField();
+        Texto.setFont(new Font("Arial", Font.BOLD, 30));
+        add(Texto, BorderLayout.NORTH);
+
+        JPanel botones = new JPanel();
+        botones.setLayout(new GridLayout(5, 4, 6, 6));
+        add(botones, BorderLayout.CENTER);
+
+        String[] teclas = {
+                "1","2","3","+",
+                "4","5","6","-",
+                "7","8","9","*",
+                "C","0","=","/",
+                "X","'","√","%"
+        };
+
+        for(String tecla: teclas){
+            JButton boton = new JButton(tecla);
+            boton.setFont(new Font("Arial",Font.BOLD,30));
+            botones.add(boton);
+        }
+
         setVisible(true);
-
-        Boton1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                JOptionPane.showMessageDialog(Jl,"HelloWorld");
-            }
-        });
     }
 
     public static void main(String[] args) {
