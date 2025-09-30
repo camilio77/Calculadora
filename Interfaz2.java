@@ -13,9 +13,9 @@ public class Interfaz2 extends JFrame {
         setLocationRelativeTo(null);
 
         Texto = new JTextField(logica.getTexto());
-        Texto.setHorizontalAlignment(SwingConstants.RIGHT);
+        Texto.setHorizontalAlignment(JTextField.RIGHT);
         Texto.setEditable(false);
-        Texto.setFocusable(true);
+        Texto.setFocusable(false);
         Texto.setFont(new Font("Arial", Font.BOLD, 30));
         add(Texto, BorderLayout.NORTH);
 

@@ -92,6 +92,7 @@ public class LogicaInterfaz {
         }
         if(error==true){
             texto="Error";
+            nuevoNumero=true;
         }else{
             primerNumero=0;
             texto=String.valueOf((long) resultado);
