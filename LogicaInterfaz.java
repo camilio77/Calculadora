@@ -4,6 +4,12 @@ public class LogicaInterfaz {
     private String texto="0";
     private boolean nuevoNumero=true;
     private String operacion="";
+    private Operaciones operacion2;
+
+
+    public LogicaInterfaz(Operaciones operacion) {
+        this.operacion2=operacion;
+    }
 
     public String getTexto(){
         return texto;

@@ -4,7 +4,8 @@ import java.awt.event.*;
 
 public class Interfaz2 extends JFrame {
     private JTextField Texto;
-    LogicaInterfaz logica= new LogicaInterfaz();
+    Operaciones operacion;
+    LogicaInterfaz logica= new LogicaInterfaz(operacion);
 
     public Interfaz2() {
         setTitle("Calculadora");
@@ -40,6 +41,7 @@ public class Interfaz2 extends JFrame {
         }
 
         setVisible(true);
+        operacion = new Operaciones();
     }
     private void alClickear(ActionEvent ev){
         String tecla=((JButton)ev.getSource()).getText();
