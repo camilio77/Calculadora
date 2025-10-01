@@ -1,7 +1,7 @@
 public class Operaciones {
     public static double division(int dividendo, int divisor) {
         if (divisor == 0) {
-            System.out.println("Error: no se puede dividir entre cero.");
+            System.out.println("Error");
             return -1;
         }
 
@@ -10,12 +10,12 @@ public class Operaciones {
 
     public static double raiz(double numero, double indice) {
         if (indice <= 0) {
-            System.out.println("El índice de la raíz debe ser mayor que cero.");
+            System.out.println("Error");
             return -1;
         }
 
         if (numero < 0 && indice % 2 == 0) {
-            System.out.println("No se puede calcular la raíz par de un número negativo.");
+            System.out.println("Error");
             return -1;
         }
 
