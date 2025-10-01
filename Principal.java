@@ -10,5 +10,6 @@ public class Principal {
             int resultado = Operaciones.potencia(base, exponente);
             System.out.println("Resultado: " + resultado);
         }
+        Operaciones operacion=new Operaciones();
     }
 }
