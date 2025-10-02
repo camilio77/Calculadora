@@ -1,7 +1,7 @@
 public class Operaciones {
     
-    public static int potencia(int base, int exponente) {
-        int resultado = 1;
+    public  double potencia(double base, double exponente) {
+        double resultado = 1;
 
         if (exponente < 0) {
             System.out.println("Este método solo admite exponentes enteros no negativos.");
@@ -15,16 +15,16 @@ public class Operaciones {
         return resultado;
     }
 
-    public static double division(int dividendo, int divisor) {
+    public double division(double dividendo, double divisor) {
         if (divisor == 0) {
             System.out.println("Error");
             return -1;
         }
 
-        return (double) dividendo / divisor;
+        return dividendo / divisor;
     }
 
-    public static double raiz(double numero, double indice) {
+    public double raiz(double numero, double indice) {
         if (indice <= 0) {
             System.out.println("Error");
             return -1;
@@ -42,15 +42,15 @@ public class Operaciones {
         return primero + segundo;
     }
     
-    public static double multiplicar(double num1, double num2) {
+    public  double multiplicar(double num1, double num2) {
         return num1 * num2;
     }
 
-    public static double dividir(double num1, double num2) {
-        return num1 / num2;
+    public double modulo(double num1, double num2) {
+        return num1 % num2;
     }
 
-    public static double restar(double num1, double num2) {
+    public double restar(double num1, double num2) {
         return num1 - num2;
     }
 }

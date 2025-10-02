@@ -70,38 +70,48 @@ public class LogicaInterfaz {
 
         switch(operacion){
             case "√":
-                if(primerNumero<0){
+                if(segundoNumero%2==0 && primerNumero<0){
                     error=true;
+                    break;
                 }else{
-                    //Aca metodo radical
+                    resultado=operacion2.raiz(primerNumero, segundoNumero);
+                    break;
                 }
             case "'":
-                //Aca metodo exponenciación
+                resultado=operacion2.potencia(primerNumero, segundoNumero);
+                break;
             case "%":
                 if(segundoNumero==0){
                     error=true;
+                    break;
                 }else{
-                    //Aca metodo modulo;
+                    resultado=operacion2.modulo(primerNumero, segundoNumero);
+                    break;
                 }
             case "/":
                 if(segundoNumero==0){
                     error=true;
+                    break;
                 }else{
-                    //Aca metodo division
+                    resultado=operacion2.division(primerNumero, segundoNumero);
+                    break;
                 }
             case "*":
-                //Aca metodo mutiplicación
+                resultado=operacion2.multiplicar(primerNumero, segundoNumero);
+                break;
             case "-":
-                //Aca metodo resta
+                resultado=operacion2.restar(primerNumero, segundoNumero);
+                break;
             case "+":
-                //Aca metodo suma
+                resultado=operacion2.suma(primerNumero, segundoNumero);
+                break;
         }
         if(error==true){
             texto="Error";
             nuevoNumero=true;
         }else{
             primerNumero=0;
-            texto=String.valueOf((long) resultado);
+            texto=String.valueOf(resultado);
             return;
         }
     }

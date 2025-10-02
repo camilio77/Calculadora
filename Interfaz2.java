@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class Interfaz2 extends JFrame {
     private JTextField Texto;
-    Operaciones operacion;
+    Operaciones operacion = new Operaciones();
     LogicaInterfaz logica= new LogicaInterfaz(operacion);
 
     public Interfaz2() {
@@ -41,10 +41,10 @@ public class Interfaz2 extends JFrame {
         }
 
         setVisible(true);
-        operacion = new Operaciones();
     }
     private void alClickear(ActionEvent ev){
         String tecla=((JButton)ev.getSource()).getText();
+        
         switch(tecla){
             default:
                 if(tecla.matches("\\d")){
@@ -52,23 +52,11 @@ public class Interfaz2 extends JFrame {
                     break;
                 }
             case "√":
-                logica.operacion(tecla);
-                break;
             case "%":
-                logica.operacion(tecla);
-                break;
             case "*":
-                logica.operacion(tecla);
-                break;
             case "'":
-                logica.operacion(tecla);
-                break;
             case "/":
-                logica.operacion(tecla);
-                break;
             case "-":
-                logica.operacion(tecla);
-                break;
             case "+":
                 logica.operacion(tecla);
                 break;
