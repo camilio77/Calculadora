@@ -37,4 +37,8 @@ public class Operaciones {
 
         return Math.pow(numero, 1.0 / indice);
     }
+    
+    public double suma(double primero, double segundo) {
+        return primero + segundo;
+    }
 }
